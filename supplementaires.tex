@@ -1,0 +1,171 @@
+\documentclass[a4paper,11pt,oneside]{article}
+\include{preambule}
+\begin{document}
+
+\begin{center}
+\psset{unit=1cm}
+\begin{pspicture}(2,-3.5)(7,6.5)
+\pspolygon[linewidth=0.2mm](0,0)(7,0)(9,1.3)(2,1.3)(0,0)
+\rput(4.55,.7){\psline[linewidth=0.2mm](0,0)(1.5,4.5)
+\psline[linewidth=0.2mm,linestyle=dashed](0,0)(-.233,-.7)
+\psline[linewidth=0.2mm](-.233,-.7)(-1,-3)
+\psdot(0,0)
+}
+\rput(7,1){\psline[linewidth=0.2mm,linestyle=dashed](0,0)(1,3)
+\psdot(1,3)
+}
+\psdot(7,1)
+\psdot(5.55,3.7)
+\psline[linewidth=0.2mm,linestyle=dashed](5.55,3.7)(8,4)
+\psline[linewidth=0.1mm,arrowsize=1.5mm]{->}(4.55,.7)(5.55,3.7)
+\psline[linewidth=0.1mm,arrowsize=1.5mm]{->}(4.55,.7)(7,1)
+\psline[linewidth=0.1mm,arrowsize=1.5mm]{->}(4.55,.7)(8,4)
+\uput{0.2}[0](8,4){$\exp$}
+\uput{0.2}[0](7,1){$\ch$}
+\uput{0.2}[180](5.55,3.7){$\sh$}
+\uput{0.2}[190](0,0){$\mathcal{P}$}
+\uput{0.2}[0](5,5){$\mathcal{I}$}
+\uput{0.2}[0](3.7,.7){$0_E$}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\coordinate (O) at (0,0);
+\coordinate (I) at (3.5,0);
+\coordinate (J) at (1,0.65);
+\coordinate (A) at ($(I)+(J)$);
+\coordinate (F) at ($(O)!0.51!(I)$);
+\coordinate (G) at ($(O)!0.5!(J)$);
+\coordinate (H) at ($(F)+(G)$);
+\coordinate (K) at ($(H)+(0,1.75)$);
+\coordinate (L) at ($(H)+(0,-0.33)$);
+\coordinate (M) at ($(H)+(0,-1.5)$);
+\draw[line width=0.1mm] (O) -- (I) -- (A) -- (J) -- cycle;
+\draw (H) node {\scriptsize $\bullet$};
+\draw[line width=0.1mm] (H) -- (K);
+\draw[line width=0.1mm,dashed] (H) -- (L);
+\draw[line width=0.1mm] (L) -- (M);
+\draw (K) node[right] {\small $\Delta$};
+\draw (O) node[left] {\small $P$};
+\draw (H) node[left] {\small $0_E$};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.15]
+\pgfmathsetmacro{\hauteur}{0.8}
+\pgfmathsetmacro{\epaisseur}{0.35}
+\coordinate (O) at (0,0);
+\coordinate (I) at (3.5,0);
+\coordinate (J) at (1,0.65);
+\coordinate (A) at ($(I)+(J)$);
+\coordinate (F) at ($(O)!0.51!(I)$);
+\coordinate (G) at ($(O)!0.5!(J)$);
+\coordinate (H) at ($(F)+(G)$);
+\coordinate (K) at ($(H)+(0,1.75)$);
+\coordinate (L) at ($(H)+(0,-0.33)$);
+\coordinate (M) at ($(H)+(0,-1.5)$);
+\coordinate (N) at ($(H)+(1,0.15)$);
+\coordinate (P) at ($(N)+(0,\hauteur)$);
+\coordinate (Q) at ($(N)-(0,\hauteur)$);
+\draw[line width=0.1mm] (O) -- (I) -- (A) -- (J) -- cycle;
+\point{(H)}{\epaisseur}
+\point{(N)}{\epaisseur}
+\point{(P)}{\epaisseur}
+\point{(Q)}{\epaisseur}
+%\draw (H) node {\scriptsize $\bullet$};
+%\draw (N) node {\scriptsize $\bullet$};
+%\draw (P) node {\scriptsize $\bullet$};
+%\draw (Q) node {\scriptsize $\bullet$};
+\draw[-stealth,line width=0.1mm]   (H) -- (P);
+\draw[-stealth,line width=0.1mm]   (H) -- (Q);
+\draw[line width=0.1mm,dashed] (H) -- (N);
+\draw[line width=0.1mm,dashed] (P) -- (Q);
+\draw[line width=0.1mm] (H) -- (K);
+\draw[line width=0.1mm,dashed] (H) -- (L);
+\draw[line width=0.1mm] (L) -- (M);
+\draw (K) node[left] {\small $\Delta$};
+\draw (O) node[left] {\small $P$};
+\draw (P) node[right] {\small $x$};
+\draw (Q) node[right] {\small $s(x)$};
+\draw (H) node[left] {\small $0_E$};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\coordinate (O) at (0,0);
+\coordinate (I) at (3.5,0);
+\coordinate (J) at (1,0.65);
+\coordinate (A) at ($(I)+(J)$);
+\coordinate (F) at ($(O)!0.51!(I)$);
+\coordinate (G) at ($(O)!0.5!(J)$);
+\coordinate (H) at ($(F)+(G)$);
+\coordinate (K) at ($(H)+(0.583,1.75)$);
+\coordinate (L) at ($(H)+(-0.11,-0.33)$);
+\coordinate (M) at ($(H)+(-0.5,-1.5)$);
+\draw[line width=0.1mm] (O) -- (I) -- (A) -- (J) -- cycle;
+\draw (H) node {\scriptsize $\bullet$};
+\draw[line width=0.1mm] (H) -- (K);
+\draw[line width=0.1mm,dashed] (H) -- (L);
+\draw[line width=0.1mm] (L) -- (M);
+\draw (K) node[right] {\small $\Delta$};
+\draw (O) node[left] {\small $P$};
+\draw (H) node[left] {\small $0_E$};
+\end{tikzpicture}
+\end{center}
+
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\coordinate (O) at (0,0);
+\coordinate (I) at (3.5,0);
+\coordinate (J) at (1,0.65);
+\coordinate (A) at ($(I)+(J)$);
+\coordinate (F) at ($(O)!0.51!(I)$);
+\coordinate (G) at ($(O)!0.5!(J)$);
+\coordinate (H) at ($(F)+(G)$);
+\coordinate (K) at ($(H)+(0.35,1.75)$);
+\coordinate (L) at ($(H)+(-0.066,-0.33)$);
+\coordinate (M) at ($(H)+(-0.3,-1.5)$);
+\draw[line width=0.1mm] (O) -- (I) -- (A) -- (J) -- cycle;
+\draw (H) node {\scriptsize $\bullet$};
+\draw[line width=0.1mm] (H) -- (K);
+\draw[line width=0.1mm,dashed] (H) -- (L);
+\draw[line width=0.1mm] (L) -- (M);
+\draw (K) node[right] {\small $\Delta$};
+\draw (O) node[left] {\small $P$};
+\draw (H) node[left] {\small $0_E$};
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}[scale=1]
+\coordinate (O) at (0,0);
+\coordinate (I) at (3.5,0.5);
+\coordinate (J) at (1,0.85);
+\coordinate (A) at ($(I)+(J)$);
+\coordinate (F) at ($(O)!0.51!(I)$);
+\coordinate (G) at ($(O)!0.5!(J)$);
+\coordinate (H) at ($(F)+(G)$);
+\coordinate (K) at ($(H)+(0.35,1.75)$);
+\coordinate (L) at ($(H)+(-0.066,-0.33)$);
+\coordinate (M) at ($(H)+(-0.3,-1.5)$);
+\draw[line width=0.1mm] (O) -- (I) -- (A) -- (J) -- cycle;
+\draw (H) node {\scriptsize $\bullet$};
+\draw[line width=0.1mm] (H) -- (K);
+\draw[line width=0.1mm,dashed] (H) -- (L);
+\draw[line width=0.1mm] (L) -- (M);
+\draw (K) node[right] {\small $D$};
+\draw (O) node[left] {\small $F$};
+\end{tikzpicture}
+\end{center}
+
+
+
+
+
+
+
+\end{document}
